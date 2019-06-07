@@ -1,0 +1,18 @@
+@import '../fonts/stylesheet.css';
+@import 'modules/fonts';
+
+
+
+div{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    font-family: $raleway;
+    font-weight: 300;
+    font-size: 80px;
+    div{
+        width: 50%;
+        height: 50%;
+        background-color: blue;
+    }
+}
