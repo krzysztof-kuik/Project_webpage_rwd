@@ -1,7 +1,13 @@
+$(()=>{
+    // console.log('App Loaded!!!');
 
-document.write('Welcome to kanye concert!');
+    let openMenu = $('.nav-icon');
+    let closeMenu = $('.nav-icon-close');
+    let navBar = $('.nav-bar')
+    console.log(openMenu, closeMenu, navBar);
+    
 
-console.log('App Loaded!!! trolololo  ');
+})
 
-let obj = $('body');
-console.log(obj);
+
+

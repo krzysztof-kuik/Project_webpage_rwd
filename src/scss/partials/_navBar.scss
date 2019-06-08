@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+
+    .header__logo {
+        font-family: $raleway;
+        font-weight: 300;
+        color: rgba(8, 166, 228, 1);
+        font-size: 32px;
+        line-height: 37px;
+        margin: 17px 25px;
+    }
+
+    .nav-icon {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .nav-icon-open,
+        .nav-icon-close {
+            display: flex;
+            flex-direction: column;
+            margin: auto 30px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-icon-open {
+            width: 20px;
+            height: 12px;
+            justify-content: space-between;
+
+
+            .nav-icon-open__element {
+                width: 100%;
+                height: 2px;
+                background-color: rgba(7, 172, 230, 1);
+                transform-origin: left center;
+            }
+
+        }
+
+        .nav-icon-close {
+            width: 16px;
+            height: 16px;
+            justify-content: center;
+            display: none;
+
+            .nav-icon-close__element {
+                transform-origin: center center;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+
+                &:nth-of-type(1) {
+                    transform: rotate(45deg);
+                    background-color: rgba(7, 172, 230, 1);
+                }
+
+                &:nth-of-type(2) {
+                    transform: rotate(-45deg);
+                    background-color: rgba(7, 172, 230, 1);
+                }
+            }
+        }
+    }
+
+
+    .nav-bar {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 100%;
+        padding: 20px 0;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+        .nav-bar__link {
+            margin: 14px 25px;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                font-family: $openSans;
+                font-weight: 700;
+                font-size: 11px;
+                line-height: 15px;
+                color: rgba(165, 165, 165, 1);
+
+                &:hover {
+                    color: rgba(0, 0, 0, 1);
+                }
+
+            }
+        }
+    }
+}
