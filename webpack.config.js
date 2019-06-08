@@ -37,6 +37,7 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
+
       {
         test: /\.scss$/,
         use: [
@@ -49,24 +50,37 @@ module.exports = {
               hmr: process.env.NODE_ENV === 'development',
             },
           },
-            "css-loader",
+          "css-loader",
           {
             loader: "sass-loader",
             options: {
-              includePaths: ["absolute/path/a", "absolute/path/b"]
+              includePaths: ["absolute/path/a", "absolute/path/b"],
+              sourceMap: true,
+              sourceMapContents: false
             }
-          }
+          },
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/'
-        }
-      }]}
+        test: /\.(woff(2)?|ttf|eot|svg|)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }]
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/'
+          }
+        }]
+      },      
     ]
   }
 };

@@ -6,7 +6,7 @@
     font-family: 'open sans';
     src: url(../fonts/opensans-bold.woff2) format('woff2'),
          url(../fonts/opensans-bold.woff) format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -18,7 +18,7 @@
     font-family: 'open sans';
     src: url(../fonts/opensans-light.woff2) format('woff2'),
          url(../fonts/opensans-light.woff) format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 
 }
@@ -30,7 +30,7 @@
     font-family: 'open sans';
     src: url(../fonts/opensans-regular.woff2) format('woff2'),
          url(../fonts/opensans-regular.woff) format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
@@ -42,7 +42,7 @@
     font-family: 'open sans';
     src: url(../fonts/opensans-semibold.woff2) format('woff2'),
          url(../fonts/opensans-semibold.woff) format('woff');
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
 
 }
@@ -54,7 +54,7 @@
     font-family: 'raleway';
     src: url(../fonts/raleway-bold.woff2) format('woff2'),
          url(../fonts/raleway-bold.woff) format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -66,7 +66,7 @@
     font-family: 'raleway';
     src: url(../fonts/raleway-extrabold.woff2) format('woff2'),
          url(../fonts/raleway-extrabold.woff) format('woff');
-    font-weight: normal;
+    font-weight: 800;
     font-style: normal;
 
 }
@@ -78,7 +78,7 @@
     font-family: 'raleway';
     src: url(../fonts/raleway-light.woff2) format('woff2'),
          url(../fonts/raleway-light.woff) format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 
 }
@@ -90,19 +90,159 @@
     font-family: 'raleway';
     src: url(../fonts/raleway-regular.woff2) format('woff2'),
          url(../fonts/raleway-regular.woff) format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
-div {
-  background-color: aqua;
-  width: 200px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%; }
+
+.main-width {
+  max-width: 1352px;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative; }
+  .header .header__logo {
+    font-family: "raleway";
+    font-weight: 300;
+    color: #08a6e4;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 17px 25px; }
+    @media screen and (min-width: 800px) {
+      .header .header__logo {
+        margin-left: 136px; } }
+  .header .nav-icon {
+    position: relative;
+    width: 100%;
+    height: auto; }
+    @media screen and (min-width: 800px) {
+      .header .nav-icon {
+        display: none; } }
+    .header .nav-icon .nav-icon-open,
+    .header .nav-icon .nav-icon-close {
+      display: flex;
+      flex-direction: column;
+      margin: auto 30px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .header .nav-icon .nav-icon-open {
+      width: 20px;
+      height: 12px;
+      justify-content: space-between; }
+      .header .nav-icon .nav-icon-open .nav-icon-open__element {
+        width: 100%;
+        height: 2px;
+        background-color: #08a6e4;
+        transform-origin: left center; }
+    .header .nav-icon .nav-icon-close {
+      width: 16px;
+      height: 16px;
+      justify-content: center;
+      visibility: hidden;
+      right: 2px; }
+      .header .nav-icon .nav-icon-close .nav-icon-close__element {
+        transform-origin: center center;
+        position: absolute;
+        width: 100%;
+        height: 2px; }
+        .header .nav-icon .nav-icon-close .nav-icon-close__element:nth-of-type(1) {
+          transform: rotate(45deg);
+          background-color: #08a6e4; }
+        .header .nav-icon .nav-icon-close .nav-icon-close__element:nth-of-type(2) {
+          transform: rotate(-45deg);
+          background-color: #08a6e4; }
+  .header .nav-bar {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 20px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+    @media screen and (min-width: 800px) {
+      .header .nav-bar {
+        display: flex;
+        position: relative;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+        height: auto;
+        margin-right: 112px; } }
+    .header .nav-bar .nav-bar__link {
+      margin: 14px 25px;
+      list-style-type: none; }
+      @media screen and (min-width: 800px) {
+        .header .nav-bar .nav-bar__link {
+          display: flex;
+          align-items: center;
+          position: relative;
+          height: auto;
+          margin: 0 25px; } }
+      .header .nav-bar .nav-bar__link a {
+        text-decoration: none;
+        font-family: "open sans";
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 15px;
+        color: #a5a5a5;
+        letter-spacing: 4px; }
+        .header .nav-bar .nav-bar__link a:hover {
+          color: black; }
+        .header .nav-bar .nav-bar__link a::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: #08a6e4;
+          bottom: 0;
+          left: 0; }
+        .header .nav-bar .nav-bar__link a:hover::after {
+          width: 100%;
+          transition: 700ms; }
+
+.info .advert {
+  margin: 80px auto 0 auto;
+  max-width: 310px; }
+  .info .advert .advert__header {
+    font-family: "raleway";
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 41px;
+    margin: 20px auto; }
+  .info .advert .advert__description {
+    display: block;
+    font-family: "open sans";
+    font-weight: 400;
+    text-align: center; }
+  .info .advert .advert__button {
+    font-family: "open sans", sans-serif;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    height: 67px;
+    border-radius: 40px;
+    background-color: #08a6e4;
+    margin: 50px auto;
+    text-align: center; }
+    .info .advert .advert__button span {
+      display: inline-block;
+      margin: 22px; }
+
+.info .info__image {
+  background-image: url(../images/Background.png);
+  width: 100%;
   height: 200px;
-  font-family: 'open sans';
-  font-weight: 800;
-  font-size: 60px; }
-  div div {
-    width: 50%;
-    height: 50%;
-    background-color: blue; }
+  background-size: cover; }
 
