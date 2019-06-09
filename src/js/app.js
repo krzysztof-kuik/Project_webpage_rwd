@@ -1,3 +1,4 @@
+require('../index.html');
 $(()=>{
     // console.log('App Loaded!!!');
 

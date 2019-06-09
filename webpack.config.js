@@ -1,12 +1,15 @@
 var path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: ["./src/js/app.js", './src/scss/main.scss'],
   mode: "development",
   output: {
     filename: "out.js",
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+   
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -14,6 +17,8 @@ module.exports = {
     watchContentBase: true,
     port: 9000,
     host: '0.0.0.0',
+    
+    
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -21,7 +26,11 @@ module.exports = {
       // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new CleanWebpackPlugin()
   ],
   module: {
     rules: [
@@ -46,7 +55,7 @@ module.exports = {
             options: {
               // you can specify a publicPath here
               // by default it uses publicPath in webpackOptions.output
-              publicPath: '../',
+
               hmr: process.env.NODE_ENV === 'development',
             },
           },
@@ -62,7 +71,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg|)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'file-loader',
           options: {
@@ -72,15 +81,26 @@ module.exports = {
         }]
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|gif|svg|)$/i,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'images/'
+            outputPath: '/images/',
+            publicPath: './images',
           }
         }]
-      },      
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src', 'img:src', 'link:href']
+          }
+        }
+      },
+      
     ]
   }
 };
