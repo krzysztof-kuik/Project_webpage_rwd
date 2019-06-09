@@ -80,6 +80,10 @@
         transform: translateY(-37px);
         width: 100%;
         position: absolute;
+        @media screen and (min-width: $breakPoint) {
+            transform: translateY(-80px);
+        }
+
         .stats {
             width: 303px;
             margin: 50px auto;
@@ -100,11 +104,42 @@
                 max-width: 176px;
                 text-align: center;
 
-                .stats-container__image{
+                .stats-container__image {
                     transform: translateX(10px);
+                    position: relative;
+
                 }
 
-                .stats-container__quantity{
+                .stats-container__null {
+                    position: relative;
+                    
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 63px;
+                        height: 63px;
+                        border-radius: 50%;
+                        background-color: grey;
+                        position: absolute;
+                        right: -17px;
+                        
+                        
+                    }
+                }
+                .stats-container__null.null-first::before {
+                        background-color: rgba(251, 59, 100, 1);
+                        bottom: -56px;
+                    }
+                .stats-container__null.null-second::before {
+                        background-color: rgba(8, 166, 228, 1);
+                        bottom: -50px;
+                    }
+                .stats-container__null.null-third::before {
+                        background-color: rgba(85, 223, 180, 1);
+                        bottom: -55px;
+                    }
+
+                .stats-container__quantity {
                     font-family: $raleway;
                     font-weight: 800;
                     margin: 20px auto;
@@ -113,7 +148,8 @@
                     letter-spacing: 4.5px;
 
                 }
-                .stats-container__of-what{
+
+                .stats-container__of-what {
                     font-weight: 400;
                     font-size: 17px;
                     line-height: 19px;
