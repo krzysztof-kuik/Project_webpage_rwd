@@ -1,0 +1,50 @@
+.price-list{
+
+    .price-list__header{
+        font-family: $raleway;
+        font-size: 36px;
+        font-weight: 400;
+        width: 100%;
+        margin: 50px auto;
+        text-align: center;
+           
+    }
+
+    .package-container{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+
+        .package-option{
+            width: 245px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .package-option__header{
+                font-family: $raleway;
+                font-size: 21px;
+                margin: 34px auto 3px auto;
+
+            }
+
+            .package-option__price{
+                font-family: $openSans;
+                font-size: 46px;
+                font-weight: 300;
+
+            }
+
+            .perks-list{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .perks-list__element{
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+}

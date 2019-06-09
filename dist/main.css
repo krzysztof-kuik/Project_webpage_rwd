@@ -354,13 +354,17 @@ body {
 .description {
   background-color: #f7f7f7;
   padding: 20px; }
+  @media screen and (min-width: 800px) {
+    .description {
+      padding: 65px 0; } }
   .description .alt-width {
     width: 314px;
     margin: 20px auto;
     border-radius: 5px; }
     @media screen and (min-width: 800px) {
       .description .alt-width {
-        width: 1124px; } }
+        width: 1124px;
+        margin: 37px auto; } }
   .description .desc-container,
   .description .desc-container-first {
     background-color: white;
@@ -387,13 +391,23 @@ body {
     .description .desc-container-first .desc-container__description {
       font-family: "open sans", sans-serif;
       font-weight: 400;
-      font-size: 14px; }
+      font-size: 14px;
+      position: relative; }
       @media screen and (min-width: 800px) {
         .description .desc-container .desc-container__description,
         .description .desc-container-first .desc-container__description {
           width: 50%;
           font-size: 16px;
-          padding-bottom: 50px; } }
+          padding-bottom: 50px; }
+          .description .desc-container .desc-container__description:after,
+          .description .desc-container-first .desc-container__description:after {
+            content: '';
+            display: inline-block;
+            width: 80%;
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 0; } }
   .description .desc-container:nth-of-Type(1):after {
     content: '';
     width: 90px;
@@ -420,8 +434,9 @@ body {
       margin: 70px auto 30px 15px; } }
   @media screen and (min-width: 800px) {
     .description .desc-container:nth-of-Type(1) .desc-container__description {
-      margin: 0 auto auto 15px;
-      border-bottom: 4px solid #fb3b64; } }
+      margin: 0 auto auto 15px; }
+      .description .desc-container:nth-of-Type(1) .desc-container__description::after {
+        background-color: #fb3b64; } }
   .description .desc-container:nth-of-Type(1) .desc-container__icon {
     width: 192px;
     margin: 17px 45px 0 35px; }
@@ -455,8 +470,9 @@ body {
     .description .desc-container:nth-of-Type(2) .desc-container__description {
       float: right;
       width: 366px;
-      border-bottom: 4px solid #08a6e4;
-      margin: 0 50px auto auto; } }
+      margin: 0 50px auto auto; }
+      .description .desc-container:nth-of-Type(2) .desc-container__description::after {
+        background-color: #08a6e4; } }
   .description .desc-container:nth-of-Type(2) .desc-container__icon {
     width: 175px;
     margin: 17px 30px 0 70px; }
@@ -466,14 +482,46 @@ body {
         width: 426px;
         height: 328px;
         margin: 10px auto auto 50px; } }
+  @media screen and (min-width: 800px) {
+    .description .desc-divided {
+      display: flex;
+      justify-content: space-between; } }
+  @media screen and (min-width: 800px) {
+    .description .desc-divided .desc-container-first {
+      margin-right: 60px;
+      width: 623px; } }
+  @media screen and (min-width: 800px) {
+    .description .desc-divided .desc-container-first .desc-container__header {
+      width: 433px;
+      margin: 70px auto 30px 15px; } }
+  @media screen and (min-width: 800px) {
+    .description .desc-divided .desc-container-first .desc-container__description {
+      width: 480px;
+      margin: 0 auto auto 15px; }
+      .description .desc-divided .desc-container-first .desc-container__description::after {
+        background-color: #55dfb4; } }
   .description .desc-divided .desc-container-second {
-    width: 100;
+    width: 100%;
     background-color: #55dfb4;
     border-radius: 5px; }
+    @media screen and (min-width: 800px) {
+      .description .desc-divided .desc-container-second {
+        width: 440px; } }
     .description .desc-divided .desc-container-second .desc-container-second__img {
       width: 100%;
       height: auto;
       position: relative;
       top: 32px;
       right: 32px; }
+      @media screen and (min-width: 800px) {
+        .description .desc-divided .desc-container-second .desc-container-second__img {
+          width: 295px;
+          top: 100px;
+          right: -60px; } }
+
+.price-list .price-list__header {
+  font-family: "raleway", sans-serif;
+  font-size: 36px;
+  width: 100%;
+  margin: 50px auto; }
 
