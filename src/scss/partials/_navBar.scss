@@ -18,7 +18,8 @@
         font-size: 32px;
         line-height: 37px;
         margin: 17px 25px;
-        @media screen and (min-width: $breakPoint){
+
+        @media screen and (min-width: $breakPoint) {
             margin-left: 136px;
         }
     }
@@ -107,13 +108,14 @@
         .nav-bar__link {
             margin: 14px 25px;
             list-style-type: none;
+
             @media screen and (min-width: $breakPoint) {
                 display: flex;
                 align-items: center;
                 position: relative;
                 height: auto;
                 margin: 0 25px;
-                
+
             }
 
             a {
@@ -128,6 +130,7 @@
                 &:hover {
                     color: rgba(0, 0, 0, 1);
                 }
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -137,14 +140,14 @@
                     bottom: 0;
                     left: 0;
                 }
+                @media screen and (min-width: $breakPoint) {
+                    &:hover::after {
+                        width: 100%;
+                        transition: 700ms;
 
-                &:hover::after {
-                    width: 100%;
-                    transition: 700ms;
+                    }
                 }
-                              
-
-
+                
             }
         }
     }

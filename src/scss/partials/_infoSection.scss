@@ -3,7 +3,8 @@
     .advert {
         margin: 80px auto 0 auto;
         max-width: 310px;
-        @media screen and (min-width: 800px){
+
+        @media screen and (min-width: 800px) {
             max-width: 100%;
             margin: 110px auto 0 auto;
             display: flex;
@@ -17,7 +18,8 @@
             font-size: 35px;
             line-height: 41px;
             margin: 20px auto;
-            @media screen and (min-width: 800px){
+
+            @media screen and (min-width: 800px) {
                 font-size: 49px;
                 line-height: 57px;
             }
@@ -43,7 +45,8 @@
             background-color: $blueButtonColor;
             margin: 28px auto 50px auto;
             text-align: center;
-            @media screen and (min-width: $breakPoint){
+
+            @media screen and (min-width: $breakPoint) {
                 width: 440px;
                 margin: 38px auto 0 auto;
             }
@@ -51,7 +54,7 @@
             span {
                 display: inline-block;
                 margin: 22px;
-            
+
             }
 
         }
@@ -61,11 +64,64 @@
         background-image: url("../images/Background.png");
         width: 100%;
         height: 267px;
-        background-size: contain;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        @media screen and (min-width: $breakPoint){
-            height: 594px;;
+
+        @media screen and (min-width: $breakPoint) {
+            height: 594px;
+            background-size: cover;
         }
     }
+
+    .stats-section {
+        background-color: white;
+        z-index: 1;
+        transform: translateY(-37px);
+        width: 100%;
+        position: absolute;
+        .stats {
+            width: 303px;
+            margin: 50px auto;
+
+            .stats__header {
+                font-family: $raleway;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 35px;
+                text-align: center;
+            }
+
+            .stats-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 25px auto;
+                max-width: 176px;
+                text-align: center;
+
+                .stats-container__image{
+                    transform: translateX(10px);
+                }
+
+                .stats-container__quantity{
+                    font-family: $raleway;
+                    font-weight: 800;
+                    margin: 20px auto;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 4.5px;
+
+                }
+                .stats-container__of-what{
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 19px;
+                    color: rgba(165, 165, 165, 1);
+                }
+            }
+        }
+    }
+
 
 }

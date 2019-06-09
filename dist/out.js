@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/images/Catalog.svg":
+/*!********************************!*\
+  !*** ./src/images/Catalog.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"./images/Catalog.svg\";\n\n//# sourceURL=webpack:///./src/images/Catalog.svg?");
+
+/***/ }),
+
+/***/ "./src/images/Eye.svg":
+/*!****************************!*\
+  !*** ./src/images/Eye.svg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"./images/Eye.svg\";\n\n//# sourceURL=webpack:///./src/images/Eye.svg?");
+
+/***/ }),
+
 /***/ "./src/images/Person.svg":
 /*!*******************************!*\
   !*** ./src/images/Person.svg ***!
@@ -104,7 +126,7 @@ eval("module.exports = \"./images/Person.svg\";\n\n//# sourceURL=webpack:///./sr
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"<!doctype html>\\n<html lang=\\\"en\\\">\\n\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\"\\n    content=\\\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\\\">\\n  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\n  <title>Document</title>\\n  <script src=\\\"https://code.jquery.com/jquery-3.4.1.min.js\\\"\\n    integrity=\\\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\\\" crossorigin=\\\"anonymous\\\">\\n    </script>\\n</head>\\n\\n<body>\\n  <!-- ---------------------navigation-------------- -->\\n  <section class=\\\"header main-width\\\">\\n\\n    <h2 class=\\\"header__logo\\\">shopabc.pl</h2>\\n\\n    <div class=\\\"nav-icon\\\">\\n      <div class=\\\"nav-icon-open\\\">\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n      </div>\\n\\n      <div class=\\\"nav-icon-close\\\">\\n        <div class=\\\"nav-icon-close__element\\\"></div>\\n        <div class=\\\"nav-icon-close__element\\\"></div>\\n      </div>\\n\\n    </div>\\n\\n\\n    <ul class=\\\"nav-bar\\\">\\n      <li class='nav-bar__link'><a href=\\\"\\\">DLACZEGO MY</a></licla>\\n      <li class='nav-bar__link'><a href=\\\"\\\">KORZYŚCI</a></li>\\n      <li class='nav-bar__link'><a href=\\\"\\\">CENY</a></li>\\n      <li class='nav-bar__link'><a href=\\\"\\\">KONTAKT</a></li>\\n    </ul>\\n\\n  </section>\\n\\n  <!-- ---------------------info-------------- -->\\n\\n  <section class=\\\"info main-width\\\">\\n\\n    <div class=\\\"advert\\\">\\n      <h2 class=\\\"advert__header\\\">Sprzedawaj więcej!</h2>\\n      <span class=\\\"advert__description\\\">Otwarcie sklepu na naszej platformie, dramatycznie zwiększy twoją\\n        sprzedaż</span>\\n      <div class=\\\"advert__button\\\"><span>Otwórz swój sklep</span></div>\\n    </div>\\n    <div class=\\\"info__image\\\"></div>\\n    <div class=\\\"stats\\\">\\n      <h2 class=\\\"stats__header\\\"></h2>\\n      <div>\\n        <img src=\\\"\" + __webpack_require__(/*! ./images/Person.svg */ \"./src/images/Person.svg\") + \"\\\" alt=\\\"person\\\">\\n      </div>\\n    </div>\\n    <spa>trolololo</spa>\\n    <span>.........123123123................</span>\\n\\n  </section>\\n\\n\\n\\n</body>\\n\\n</html>\";\n\n//# sourceURL=webpack:///./src/index.html?");
+eval("module.exports = \"<!doctype html>\\n<html lang=\\\"en\\\">\\n\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\"\\n    content=\\\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\\\">\\n  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\n  <title>Document</title>\\n  <script src=\\\"https://code.jquery.com/jquery-3.4.1.min.js\\\"\\n    integrity=\\\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\\\" crossorigin=\\\"anonymous\\\">\\n    </script>\\n</head>\\n\\n<body>\\n  <!-- ---------------------navigation-------------- -->\\n  <section class=\\\"header main-width\\\">\\n\\n    <h2 class=\\\"header__logo\\\">shopabc.pl</h2>\\n\\n    <div class=\\\"nav-icon\\\">\\n      <div class=\\\"nav-icon-open\\\">\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n        <div class=\\\"nav-icon-open__element\\\"></div>\\n      </div>\\n\\n      <div class=\\\"nav-icon-close\\\">\\n        <div class=\\\"nav-icon-close__element\\\"></div>\\n        <div class=\\\"nav-icon-close__element\\\"></div>\\n      </div>\\n\\n    </div>\\n\\n\\n    <ul class=\\\"nav-bar\\\">\\n      <li class='nav-bar__link'><a href=\\\"\\\">DLACZEGO MY</a></licla>\\n      <li class='nav-bar__link'><a href=\\\"\\\">KORZYŚCI</a></li>\\n      <li class='nav-bar__link'><a href=\\\"\\\">CENY</a></li>\\n      <li class='nav-bar__link'><a href=\\\"\\\">KONTAKT</a></li>\\n    </ul>\\n\\n  </section>\\n\\n  <!-- ---------------------info-------------- -->\\n\\n  <section class=\\\"info main-width\\\">\\n\\n    <div class=\\\"advert\\\">\\n      <h2 class=\\\"advert__header\\\">Sprzedawaj więcej!</h2>\\n      <span class=\\\"advert__description\\\">Otwarcie sklepu na naszej platformie, dramatycznie zwiększy twoją\\n        sprzedaż</span>\\n      <div class=\\\"advert__button\\\"><span>Otwórz swój sklep</span></div>\\n    </div>\\n    <div class=\\\"info__image\\\"></div>\\n    <div class=\\\"stats\\\">\\n      <h2 class=\\\"stats__header\\\"></h2>\\n      <div>\\n        <img class=\\\"stats__image\\\" src=\\\"\" + __webpack_require__(/*! ./images/Person.svg */ \"./src/images/Person.svg\") + \"\\\" alt=\\\"person\\\">\\n        <span class=\\\"stats__quantity\\\">100000+</span>\\n        <span class=\\\"stats__of-what\\\">wizyt dziennie</span>\\n      </div>\\n      <div>\\n        <img class=\\\"stats__image\\\" src=\\\"\" + __webpack_require__(/*! ./images/Eye.svg */ \"./src/images/Eye.svg\") + \"\\\" alt=\\\"person\\\">\\n        <span class=\\\"stats__quantity\\\">2000000+</span>\\n        <span class=\\\"stats__of-what\\\">obejrzanych każdego dnia produktów</span>\\n      </div>\\n      <div>\\n        <img class=\\\"stats__image\\\" src=\\\"\" + __webpack_require__(/*! ./images/Catalog.svg */ \"./src/images/Catalog.svg\") + \"\\\" alt=\\\"person\\\">\\n        <span class=\\\"stats__quantity\\\">10000+</span>\\n        <span class=\\\"stats__of-what\\\">dodawanych wpisów dziennie</span>\\n      </div>\\n    </div>\\n   \\n\\n  </section>\\n\\n\\n\\n</body>\\n\\n</html>\";\n\n//# sourceURL=webpack:///./src/index.html?");
 
 /***/ }),
 

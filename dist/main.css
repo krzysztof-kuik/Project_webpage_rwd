@@ -209,9 +209,10 @@ body {
           background-color: #08a6e4;
           bottom: 0;
           left: 0; }
-        .header .nav-bar .nav-bar__link a:hover::after {
-          width: 100%;
-          transition: 700ms; }
+        @media screen and (min-width: 800px) {
+          .header .nav-bar .nav-bar__link a:hover::after {
+            width: 100%;
+            transition: 700ms; } }
 
 .info .advert {
   margin: 80px auto 0 auto;
