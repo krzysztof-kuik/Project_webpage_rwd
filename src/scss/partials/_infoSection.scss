@@ -67,6 +67,15 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
+        &:after {
+            content: '';
+            width: 100%;
+            height: 13%;
+            position: absolute;
+            bottom:0px;
+            background-color: rgba(255, 255, 255, 1);
+        }
 
         @media screen and (min-width: $breakPoint) {
             height: 594px;
@@ -77,16 +86,24 @@
     .stats-section {
         background-color: white;
         z-index: 1;
-        transform: translateY(-37px);
         width: 100%;
-        position: absolute;
-        @media screen and (min-width: $breakPoint) {
-            transform: translateY(-80px);
-        }
+        position: relative;
+        
+
+        // @media screen and (min-width: $breakPoint) {
+        //     transform: translateY(-80px);
+        // }
 
         .stats {
             width: 303px;
-            margin: 50px auto;
+            margin: 0 auto;
+
+            @media screen and (min-width: $breakPoint) {
+                display: flex;
+                flex-wrap: wrap;
+                width: 700px;
+                justify-content: space-between;
+            }
 
             .stats__header {
                 font-family: $raleway;
@@ -94,6 +111,10 @@
                 font-size: 30px;
                 line-height: 35px;
                 text-align: center;
+
+                @media screen and (min-width: $breakPoint) {
+                    margin: 100px auto 0 auto;
+                }
             }
 
             .stats-container {
@@ -104,6 +125,13 @@
                 max-width: 176px;
                 text-align: center;
 
+                @media screen and (min-width: $breakPoint) {
+                    margin: 100px 0;
+                    &:nth-last-of-type(2){
+                        transform: translateX(24px);
+                    }
+                }
+
                 .stats-container__image {
                     transform: translateX(10px);
                     position: relative;
@@ -112,7 +140,7 @@
 
                 .stats-container__null {
                     position: relative;
-                    
+
                     &::before {
                         content: '';
                         display: inline-block;
@@ -122,22 +150,25 @@
                         background-color: grey;
                         position: absolute;
                         right: -17px;
-                        
-                        
+
+
                     }
                 }
+
                 .stats-container__null.null-first::before {
-                        background-color: rgba(251, 59, 100, 1);
-                        bottom: -56px;
-                    }
+                    background-color: rgba(251, 59, 100, 1);
+                    bottom: -56px;
+                }
+
                 .stats-container__null.null-second::before {
-                        background-color: rgba(8, 166, 228, 1);
-                        bottom: -50px;
-                    }
+                    background-color: rgba(8, 166, 228, 1);
+                    bottom: -50px;
+                }
+
                 .stats-container__null.null-third::before {
-                        background-color: rgba(85, 223, 180, 1);
-                        bottom: -55px;
-                    }
+                    background-color: rgba(85, 223, 180, 1);
+                    bottom: -55px;
+                }
 
                 .stats-container__quantity {
                     font-family: $raleway;
