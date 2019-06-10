@@ -1,48 +1,111 @@
-.price-list{
+.price-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
 
-    .price-list__header{
+    .price-list__header {
         font-family: $raleway;
         font-size: 36px;
         font-weight: 400;
         width: 100%;
-        margin: 50px auto;
+        margin: 50px auto 70px auto;
         text-align: center;
-           
+
     }
 
-    .package-container{
+    .package-container {
         display: flex;
         flex-direction: row;
-        overflow: auto;
+        justify-content: center;
+        width: 100%;
 
-        .package-option{
+        .package-option {
             width: 245px;
+            min-width: 245px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-radius: 18px;
+            height: 326px;
 
-            .package-option__header{
+            &.basic {
+                border: 1px solid rgba(251, 59, 100, 1);
+            }
+
+            &.professional {
+                box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
+                border: 1px solid rgba(7, 172, 230, 1);
+                position: relative;
+                transform: translateY(-20px);
+                margin: 0 36px;
+                height: 366px;
+
+                .package-option__price::after{
+                    content: 'Oferta ograniczona';
+                    display: block;
+                    font-family: $raleway;
+                    font-weight: 700;
+                    font-size: 12px;
+                    position: absolute;
+                    bottom: -20px;
+                    width: 100%;
+                }
+
+            }
+
+            &.premium {
+                border: 1px solid rgba(85, 223, 180, 1);
+
+                .package-option__price::after {
+                    content: 'Oferta ograniczona';
+                    display: block;
+                    font-family: $raleway;
+                    font-weight: 700;
+                    font-size: 12px;
+                    position: absolute;
+                    bottom: -20px;
+                    width: 100%;
+                }
+            }
+
+            .package-option__header {
                 font-family: $raleway;
                 font-size: 21px;
                 margin: 34px auto 3px auto;
 
             }
 
-            .package-option__price{
+            .package-option__price {
                 font-family: $openSans;
                 font-size: 46px;
                 font-weight: 300;
+                text-align: center;
+                position: relative;
+                width: 100%;
 
             }
 
-            .perks-list{
+            // .package-option__limited {
+            //     font-family: $raleway;
+            //     font-weight: 700;
+
+            // }
+
+            .perks-list {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                margin: 43px auto 48px auto;
+                font-family: $openSans;
+                font-weight: 400;
+                font-size: 14px;
+                
 
-                .perks-list__element{
+                .perks-list__element {
                     list-style-type: none;
+                    margin: 5px auto;
                 }
             }
         }

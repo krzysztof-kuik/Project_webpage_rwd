@@ -522,6 +522,33 @@ body {
 .price-list .price-list__header {
   font-family: "raleway", sans-serif;
   font-size: 36px;
+  font-weight: 400;
   width: 100%;
-  margin: 50px auto; }
+  margin: 50px auto;
+  text-align: center; }
+
+.price-list .package-container {
+  display: flex;
+  flex-direction: row;
+  overflow: auto; }
+  .price-list .package-container .package-option {
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .price-list .package-container .package-option .package-option__header {
+      font-family: "raleway", sans-serif;
+      font-size: 21px;
+      margin: 34px auto 3px auto; }
+    .price-list .package-container .package-option .package-option__price {
+      font-family: "open sans", sans-serif;
+      font-size: 46px;
+      font-weight: 300; }
+    .price-list .package-container .package-option .perks-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+      .price-list .package-container .package-option .perks-list .perks-list__element {
+        list-style-type: none; }
 

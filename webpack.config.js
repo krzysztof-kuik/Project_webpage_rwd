@@ -80,17 +80,17 @@ module.exports = {
           }
         }]
       },
-      {
-        test: /\.(png|jpg|gif|svg|)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: '/images/',
-            publicPath: './images',
-          }
-        }]
-      },
+      // {
+      //   test: /\.(png|jpg|gif|svg|)$/i,
+      //   use: [{
+      //     loader: 'file-loader',
+      //     options: {
+      //       name: '[name].[ext]',
+      //       outputPath: '/images/',
+      //       publicPath: './images',
+      //     }
+      //   }]
+      // },
       {
         test: /\.(html)$/,
         use: {
@@ -100,7 +100,21 @@ module.exports = {
           }
         }
       },
-      
+      {
+        test: /\.(png|jpg|gif|svg|)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: false,
+              name: '[name].[ext]',
+              outputPath: '/images/',
+              publicPath: './images',
+              
+            },
+          },
+        ],
+      },
     ]
   }
 };
