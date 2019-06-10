@@ -522,15 +522,18 @@ body {
 .price-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
   .price-list .price-list__header {
     font-family: "raleway", sans-serif;
     font-size: 36px;
     font-weight: 400;
     width: 100%;
     margin: 50px auto 70px auto;
-    text-align: center; }
+    text-align: center;
+    z-index: -1; }
+    @media screen and (min-width: 800px) {
+      .price-list .price-list__header {
+        margin: 100px auto 71px auto; } }
   .price-list .package-container {
     display: flex;
     flex-direction: row;
@@ -561,6 +564,11 @@ body {
           bottom: 0px; }
       .price-list .package-container .package-option.basic {
         border: 1px solid #fb3b64; }
+        @media screen and (min-width: 800px) {
+          .price-list .package-container .package-option.basic {
+            width: 372px;
+            min-width: 372px;
+            height: 461px; } }
         .price-list .package-container .package-option.basic .package-option__price {
           color: #fb3b64; }
         .price-list .package-container .package-option.basic .package-option__start {
@@ -572,6 +580,12 @@ body {
         transform: translateY(-20px);
         margin: 0 36px;
         height: 366px; }
+        @media screen and (min-width: 800px) {
+          .price-list .package-container .package-option.professional {
+            width: 405px;
+            min-width: 405px;
+            height: 500px;
+            margin: 0 60px; } }
         .price-list .package-container .package-option.professional .package-option__price::after {
           content: 'Oferta ograniczona';
           display: block;
@@ -585,11 +599,20 @@ body {
         .price-list .package-container .package-option.professional .package-option__price {
           color: #07ace6; }
         .price-list .package-container .package-option.professional .package-option__start {
-          background-color: #07ace6; }
+          background-color: #07ace6;
+          box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16); }
         .price-list .package-container .package-option.professional .perks-list {
           margin-top: 40px; }
+          @media screen and (min-width: 800px) {
+            .price-list .package-container .package-option.professional .perks-list {
+              margin-top: 61px; } }
       .price-list .package-container .package-option.premium {
         border: 1px solid #55dfb4; }
+        @media screen and (min-width: 800px) {
+          .price-list .package-container .package-option.premium {
+            width: 372px;
+            min-width: 372px;
+            height: 461px; } }
         .price-list .package-container .package-option.premium .package-option__price::after {
           content: 'Oferta ograniczona';
           display: block;
@@ -615,6 +638,9 @@ body {
         text-align: center;
         position: relative;
         width: 100%; }
+        @media screen and (min-width: 800px) {
+          .price-list .package-container .package-option .package-option__price {
+            margin: 14px auto; } }
       .price-list .package-container .package-option .perks-list {
         display: flex;
         flex-direction: column;
@@ -624,9 +650,15 @@ body {
         font-family: "open sans", sans-serif;
         font-weight: 400;
         font-size: 14px; }
+        @media screen and (min-width: 800px) {
+          .price-list .package-container .package-option .perks-list {
+            margin-top: 50px; } }
         .price-list .package-container .package-option .perks-list .perks-list__element {
           list-style-type: none;
           margin: 5px auto; }
+          @media screen and (min-width: 800px) {
+            .price-list .package-container .package-option .perks-list .perks-list__element {
+              margin: 13px auto; } }
       .price-list .package-container .package-option .package-option__start {
         width: 165px;
         padding: 16px 48px;
@@ -637,4 +669,201 @@ body {
         color: white;
         position: absolute;
         bottom: -25px; }
+
+.calculator {
+  background-color: #F7F7F7;
+  padding-top: 87px;
+  display: flex;
+  flex-direction: column;
+  min-height: 638px; }
+
+.calculator h2 {
+  font-family: "raleway", sans-serif;
+  font-size: 36px;
+  line-height: 42px; }
+
+.calculator > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 52px auto 109px auto; }
+
+.calculator form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 400px;
+  padding: 0 23px; }
+
+.calculator form label,
+.dropDownLabel {
+  width: 100%; }
+
+.calculator form label:nth-last-of-type(1) {
+  margin-bottom: auto; }
+
+.dropDownContainer {
+  width: 100%;
+  position: relative;
+  margin: 10px 0; }
+
+#numberOfOrders,
+#numberOfProducts,
+.dropDownLabel {
+  width: 100%;
+  height: 40px;
+  font-family: "open sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 10px 0;
+  border: 1px solid #08A6E4;
+  box-shadow: 0 3px 6px rgba(8, 166, 228, 0.16);
+  border-radius: 6px;
+  background-color: white;
+  color: #a5a5a5;
+  padding: 0 20px; }
+
+.dropDownLabel {
+  display: block;
+  padding: 11px 20px;
+  margin: 0; }
+
+.dropDownLabel:focus {
+  border: 1px solid #0785bd; }
+
+.dropdownList li:focus {
+  border: 1px solid #EB476E;
+  outline: none; }
+
+.calculator .calculator_summary {
+  display: flex;
+  flex-direction: column;
+  width: 385px;
+  padding: 0 23px; }
+
+.dropDownContainer img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  transform-origin: center center;
+  transform: rotate(-180deg);
+  transition: transform 500ms ease-out; }
+
+.dropdownList {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  /*padding: 11px 20px;*/
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #EB476E;
+  box-shadow: 0 3px 6px rgba(235, 71, 110, 0.16);
+  font-family: "open sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  position: absolute;
+  transform: translateY(10px);
+  transition: opacity 700ms ease-out;
+  z-index: -1;
+  /*transition: opacity 500ms;*/ }
+
+.dropdownList li {
+  width: 100%;
+  padding: 11px 20px;
+  text-align: left; }
+
+.dropdownList li:hover {
+  cursor: default;
+  background-color: rgba(210, 210, 210, 0.11); }
+
+.calculator .calculator_summary li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #55dfb4;
+  border-radius: 6px;
+  color: white;
+  font-family: "open sans", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 4px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 8px auto; }
+
+.price {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px; }
+
+.calculator li.invisible {
+  display: none; }
+
+#total {
+  width: 179px;
+  background-color: #08a6e4;
+  margin: 0 0 auto auto; }
+
+.checkbox_container {
+  font-family: "open sans", sans-serif;
+  text-align: left;
+  line-height: 17px;
+  font-size: 12px;
+  color: #707070;
+  margin: 23px auto 27px 0px;
+  padding-left: 34px;
+  position: relative; }
+
+#firstCheckbox,
+#secondCheckbox {
+  padding-left: 10px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: -4px; }
+
+#firstCheckbox:after,
+#secondCheckbox:after {
+  content: '';
+  display: block;
+  background-image: url(./images/Checkmark.svg);
+  background-size: cover;
+  width: 16px;
+  height: 18px;
+  opacity: 0;
+  position: absolute;
+  left: 2px;
+  top: 0; }
+
+#accountancyCheckboc:hover + #firstCheckbox,
+#terminalCheckbox:hover + #secondCheckbox {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+#accountancyCheckboc:checked + #firstCheckbox:after,
+#terminalCheckbox:checked + #secondCheckbox:after {
+  opacity: 1; }
+
+#accountancyCheckboc:focus + #firstCheckbox,
+#terminalCheckbox:focus + #secondCheckbox {
+  border: 2px solid #08A6E4; }
+
+#accountancyCheckboc,
+#terminalCheckbox {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  bottom: -3px;
+  opacity: 0; }
 

@@ -168,6 +168,94 @@
 
   </section>
 
+  <section class="main_width calculator">
+  
+    <h2>Oblicz ile zapłacisz</h2>
+    <div>
+  
+      <form>
+  
+        <label>
+          <input id="numberOfProducts" type="number" placeholder="ilość produktów" min="0" max="100">
+        </label>
+        <label>
+          <input id="numberOfOrders" type="number" placeholder="Szacowana ilość zamówień w miesiącu" min="0" max="100">
+        </label>
+  
+  
+        <!--      <label>
+                  <div class="custom-select">
+                  <select>
+                    <option>Wybierz Pakiet</option>
+                    <option selected value="podstawowy">Podstawowy</option>
+                    <option value="profesjonalny">Profesjonalny</option>
+                    <option value="premium">Premium</option>
+                  </select>
+                  </div>
+                </label>-->
+  
+  
+        <div class="dropDownContainer">
+          <span class="dropDownLabel" tabindex="0">Wybierz pakiet</span><img src="./images/ArrowDown.svg">
+          <ul class="dropdownList">
+            <li tabindex="1">Podstawowy</li>
+            <li tabindex="2">Profesjonalny</li>
+            <li tabindex="3">Premium</li>
+          </ul>
+        </div>
+  
+  
+  
+        <label class="checkbox_container">
+          <input id="accountancyCheckboc" type="checkbox" value="accountancy">
+          <span id="firstCheckbox"></span>
+          Obsługa księgowa
+        </label>
+        <label class="checkbox_container">
+          <input id="terminalCheckbox" type="checkbox" value="terminal renting">
+          <span id="secondCheckbox"></span>
+          Wynajem terminala płatniczego
+        </label>
+  
+      </form>
+  
+      <ul class="calculator_summary">
+        <li id="products">
+          <span>Produkty</span>
+          <span class="description"></span>
+          <span class="price"></span>
+        </li>
+  
+        <li id="orders">
+          <span>Zamówienia</span>
+          <span class="description"></span>
+          <span class="price"></span>
+        </li>
+  
+        <li id="package">
+          <span>Pakiet</span>
+          <span class="description"></span>
+          <span class="price"></span>
+        </li>
+  
+        <li id="accountancy" class="invisible">
+          <span>Księgowość</span>
+          <span class="price"></span>
+        </li>
+        <li id="terminal" class="invisible">
+          <span>Terminal</span>
+          <span class="price"></span>
+        </li>
+        <li id="total">
+          <span>Suma</span>
+          <span class="price"></span>
+        </li>
+  
+      </ul>`
+    </div>
+  </section>
+
+
 
 
 <script type="text/javascript" src="out.js"></script></body>
