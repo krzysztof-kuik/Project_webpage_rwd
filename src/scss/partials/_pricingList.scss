@@ -28,9 +28,39 @@
             align-items: center;
             border-radius: 18px;
             height: 326px;
+            position: relative;
+
+            .check {
+                position: relative;
+
+                &::before {
+                    content: url('../images/checkmark.svg');
+                    position: absolute;
+                    left: -18px;
+                    bottom: 0px;
+                }
+            }
+            .uncheck {
+                position: relative;
+
+                &::before {
+                    content: url('../images/close.svg');
+                    position: absolute;
+                    left: -18px;
+                    bottom: 0px;
+                }
+            }
 
             &.basic {
                 border: 1px solid rgba(251, 59, 100, 1);
+
+                .package-option__price {
+                    color: rgba(251, 59, 100, 1);
+                }
+
+                .package-option__start {
+                    background-color: rgba(251, 59, 100, 1);
+                }
             }
 
             &.professional {
@@ -41,7 +71,7 @@
                 margin: 0 36px;
                 height: 366px;
 
-                .package-option__price::after{
+                .package-option__price::after {
                     content: 'Oferta ograniczona';
                     display: block;
                     font-family: $raleway;
@@ -50,8 +80,21 @@
                     position: absolute;
                     bottom: -20px;
                     width: 100%;
+                    color: black;
                 }
 
+                .package-option__price {
+                    color: rgba(7, 172, 230, 1);
+                }
+
+                .package-option__start {
+                    background-color: rgba(7, 172, 230, 1);
+                    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+                }
+
+                .perks-list {
+                    margin-top: 40px;
+                }
             }
 
             &.premium {
@@ -66,6 +109,15 @@
                     position: absolute;
                     bottom: -20px;
                     width: 100%;
+                    color: black;
+                }
+
+                .package-option__price {
+                    color: rgba(85, 223, 180, 1);
+                }
+
+                .package-option__start {
+                    background-color: rgba(85, 223, 180, 1);
                 }
             }
 
@@ -97,16 +149,29 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                margin: 43px auto 48px auto;
+                margin: 25px auto;
                 font-family: $openSans;
                 font-weight: 400;
                 font-size: 14px;
-                
+
 
                 .perks-list__element {
                     list-style-type: none;
                     margin: 5px auto;
                 }
+            }
+
+            .package-option__start {
+                width: 165px;
+                padding: 16px 48px;
+                border-radius: 23px;
+                font-family: $openSans;
+                font-weight: 700;
+                font-size: 13px;
+                color: rgba(255, 255, 255, 1);
+                position: absolute;
+                bottom: -25px;
+
             }
         }
     }
