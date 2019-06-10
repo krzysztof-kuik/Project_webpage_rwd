@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 
     .price-list__header {
         font-family: $raleway;
@@ -11,6 +11,11 @@
         width: 100%;
         margin: 50px auto 70px auto;
         text-align: center;
+        z-index: -1;
+
+        @media screen and (min-width: $breakPoint) {
+            margin: 100px auto 71px auto;
+        }
 
     }
 
@@ -30,6 +35,7 @@
             height: 326px;
             position: relative;
 
+
             .check {
                 position: relative;
 
@@ -40,6 +46,7 @@
                     bottom: 0px;
                 }
             }
+
             .uncheck {
                 position: relative;
 
@@ -53,6 +60,12 @@
 
             &.basic {
                 border: 1px solid rgba(251, 59, 100, 1);
+
+                @media screen and (min-width: $breakPoint) {
+                    width: 372px;
+                    min-width: 372px;
+                    height: 461px;
+                }
 
                 .package-option__price {
                     color: rgba(251, 59, 100, 1);
@@ -70,6 +83,15 @@
                 transform: translateY(-20px);
                 margin: 0 36px;
                 height: 366px;
+
+                @media screen and (min-width: $breakPoint) {
+                    width: 405px;
+                    min-width: 405px;
+                    height: 500px;
+                    margin: 0 60px;
+
+
+                }
 
                 .package-option__price::after {
                     content: 'Oferta ograniczona';
@@ -94,11 +116,21 @@
 
                 .perks-list {
                     margin-top: 40px;
+
+                    @media screen and (min-width: $breakPoint) {
+                        margin-top: 61px;
+                    }
                 }
             }
 
             &.premium {
                 border: 1px solid rgba(85, 223, 180, 1);
+
+                @media screen and (min-width: $breakPoint) {
+                    width: 372px;
+                    min-width: 372px;
+                    height: 461px;
+                }
 
                 .package-option__price::after {
                     content: 'Oferta ograniczona';
@@ -136,6 +168,10 @@
                 position: relative;
                 width: 100%;
 
+                @media screen and (min-width: $breakPoint) {
+                    margin: 14px auto;
+                }
+
             }
 
             // .package-option__limited {
@@ -154,10 +190,19 @@
                 font-weight: 400;
                 font-size: 14px;
 
+                @media screen and (min-width: $breakPoint) {
+                    margin-top: 50px;
+                }
+
+
 
                 .perks-list__element {
                     list-style-type: none;
                     margin: 5px auto;
+
+                    @media screen and (min-width: $breakPoint) {
+                        margin: 13px auto;
+                    }
                 }
             }
 
