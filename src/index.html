@@ -81,7 +81,7 @@
 
 
   </section>
-
+  <!-- -------------------description-------------------- -->
   <section class="description main-width">
 
     <div class="desc-container alt-width">
@@ -115,6 +115,7 @@
   </section>
 
 
+  <!-- ---------------pricing-------------------------- -->
   <section class="price-list main-width">
 
     <h2 class="price-list__header">Cennik</h2>
@@ -168,24 +169,27 @@
 
   </section>
 
+  <!-- --------------------calculator---------------------- -->
+
   <section id='calc'>
 
-  <section class="main_width calculator">
-  
-    <h2>Oblicz ile zapłacisz</h2>
-    <div>
-  
-      <form>
-  
-        <label>
-          <input id="numberOfProducts" type="number" placeholder="ilość produktów" min="0" max="100">
-        </label>
-        <label>
-          <input id="numberOfOrders" type="number" placeholder="Szacowana ilość zamówień w miesiącu" min="0" max="100">
-        </label>
-  
-  
-        <!--      <label>
+    <section class="main_width calculator">
+
+      <h2>Oblicz ile zapłacisz</h2>
+      <div>
+
+        <form>
+
+          <label>
+            <input id="numberOfProducts" type="number" placeholder="ilość produktów" min="0" max="100">
+          </label>
+          <label>
+            <input id="numberOfOrders" type="number" placeholder="Szacowana ilość zamówień w miesiącu" min="0"
+              max="100">
+          </label>
+
+
+          <!--      <label>
                   <div class="custom-select">
                   <select>
                     <option>Wybierz Pakiet</option>
@@ -195,69 +199,96 @@
                   </select>
                   </div>
                 </label>-->
-  
-  
-        <div class="dropDownContainer">
-          <span class="dropDownLabel" tabindex="0">Wybierz pakiet</span><img src="./images/ArrowDown.svg">
-          <ul class="dropdownList">
-            <li tabindex="1">Podstawowy</li>
-            <li tabindex="2">Profesjonalny</li>
-            <li tabindex="3">Premium</li>
-          </ul>
-        </div>
-  
-  
-  
-        <label class="checkbox_container">
-          <input id="accountancyCheckboc" type="checkbox" value="accountancy">
-          <span id="firstCheckbox"></span>
-          Obsługa księgowa
-        </label>
-        <label class="checkbox_container">
-          <input id="terminalCheckbox" type="checkbox" value="terminal renting">
-          <span id="secondCheckbox"></span>
-          Wynajem terminala płatniczego
-        </label>
-  
-      </form>
-  
-      <ul class="calculator_summary">
-        <li id="products">
-          <span>Produkty</span>
-          <span class="calc_description"></span>
-          <span class="price"></span>
-        </li>
-  
-        <li id="orders">
-          <span>Zamówienia</span>
-          <span class="calc_description"></span>
-          <span class="price"></span>
-        </li>
-  
-        <li id="package">
-          <span>Pakiet</span>
-          <span class="calc_description"></span>
-          <span class="price"></span>
-        </li>
-  
-        <li id="accountancy" class="invisible">
-          <span>Księgowość</span>
-          <span class="price"></span>
-        </li>
-        <li id="terminal" class="invisible">
-          <span>Terminal</span>
-          <span class="price"></span>
-        </li>
-        <li id="total">
-          <span>Suma</span>
-          <span class="price"></span>
-        </li>
-  
-      </ul>`
-    </div>
-  </section>
-  
 
+
+          <div class="dropDownContainer">
+            <span class="dropDownLabel" tabindex="0">Wybierz pakiet</span><img src="./images/ArrowDown.svg">
+            <ul class="dropdownList">
+              <li tabindex="1">Podstawowy</li>
+              <li tabindex="2">Profesjonalny</li>
+              <li tabindex="3">Premium</li>
+            </ul>
+          </div>
+
+
+
+          <label class="checkbox_container">
+            <input id="accountancyCheckboc" type="checkbox" value="accountancy">
+            <span id="firstCheckbox"></span>
+            Obsługa księgowa
+          </label>
+          <label class="checkbox_container">
+            <input id="terminalCheckbox" type="checkbox" value="terminal renting">
+            <span id="secondCheckbox"></span>
+            Wynajem terminala płatniczego
+          </label>
+
+        </form>
+
+        <ul class="calculator_summary">
+          <li id="products">
+            <span>Produkty</span>
+            <span class="calc_description"></span>
+            <span class="price"></span>
+          </li>
+
+          <li id="orders">
+            <span>Zamówienia</span>
+            <span class="calc_description"></span>
+            <span class="price"></span>
+          </li>
+
+          <li id="package">
+            <span>Pakiet</span>
+            <span class="calc_description"></span>
+            <span class="price"></span>
+          </li>
+
+          <li id="accountancy" class="invisible">
+            <span>Księgowość</span>
+            <span class="price"></span>
+          </li>
+          <li id="terminal" class="invisible">
+            <span>Terminal</span>
+            <span class="price"></span>
+          </li>
+          <li id="total">
+            <span>Suma</span>
+            <span class="price"></span>
+          </li>
+
+        </ul>`
+      </div>
+    </section>
+  </section>
+
+
+  <!-- ------------------questionForm------------------- -->
+
+  <section class="question-form-section main-width">
+
+    <div class="contact-form">
+      <h2 class="contact-form__header">Masz pytania?</h2>
+      <span class="contact-form__description">Zostaw dla nas swój adres mailowy, lub zadzwoń!</span>
+      <span class="contact-form__mail">info@shopabc.pl</span>
+      <span class="contact-form__phone">123 456 789</span>
+    </div>
+
+    <form class="question-form">
+      <label><span class="question-form__label">IMIĘ I NAZWISKO</span>
+        <input class="question-form_name" type="text">
+      </label>
+      <label><span class='question-form__label'>EMAIL</span>
+        <input class="question-form_mail" type="mail">
+      </label>
+      <label>
+        <input class="question-form_checkbox" type="checkbox">
+      </label>
+
+      <input class="question-form_submit" type="submit" value="Wyślij">
+    </form>
+
+  </section>
 
 
 

@@ -1,0 +1,72 @@
+.question-form-section{
+    display: flex;
+    flex-direction: column;
+
+    .contact-form{
+        width: 320px;
+        margin: 90px auto 56px auto;
+        .contact-form__header{
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 40px;
+            margin-top: 5px;
+
+        }
+
+        .contact-form__description{
+            font-family: $openSans;
+            font-weight: 400;
+            font-size: 16px;
+            display: block;
+
+        }
+        
+        .contact-form__mail,
+        .contact-form__phone {
+            font-family: $openSans;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+            color: rgba(165, 165, 165, 1);
+            position: relative;
+            margin:15px auto auto 35px;
+            
+        }
+        .contact-form__mail{
+            &::before{
+                content: url('../images/Phone_Icon.svg');
+                position: absolute;
+                display: block;
+                left: -35px;
+            }
+        }
+        .contact-form__phone{
+            &::before{
+                content: url('../images/mail_icon.svg');
+                position: absolute;
+                display: block;
+                left: -35px;
+            }
+        }
+
+    }
+
+    .question-form{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin: 0 auto;
+        background-color: red;
+
+        .question-form__label{
+            display: block;
+            
+        }
+
+        .question-form_name{
+            
+        }
+    }
+
+
+}
