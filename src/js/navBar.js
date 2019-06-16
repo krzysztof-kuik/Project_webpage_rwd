@@ -1,5 +1,5 @@
 // require('../index.html');
-export default nav_bar;
+export default navBar;
 
 
 let openMenu = $('.nav-icon-open');

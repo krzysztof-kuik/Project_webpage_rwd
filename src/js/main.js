@@ -1,4 +1,3 @@
-
 import "../scss/main.scss";
-import nav_bar from "./nav_bar";
+import navBar from "./navBar";
 import calc from "./calc"

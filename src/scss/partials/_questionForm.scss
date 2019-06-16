@@ -1,11 +1,12 @@
-.question-form-section{
+.question-form-section {
     display: flex;
     flex-direction: column;
 
-    .contact-form{
+    .contact-form {
         width: 320px;
         margin: 90px auto 56px auto;
-        .contact-form__header{
+
+        .contact-form__header {
             font-family: $raleway;
             font-weight: 400;
             font-size: 40px;
@@ -13,14 +14,14 @@
 
         }
 
-        .contact-form__description{
+        .contact-form__description {
             font-family: $openSans;
             font-weight: 400;
             font-size: 16px;
             display: block;
 
         }
-        
+
         .contact-form__mail,
         .contact-form__phone {
             font-family: $openSans;
@@ -29,19 +30,21 @@
             display: block;
             color: rgba(165, 165, 165, 1);
             position: relative;
-            margin:15px auto auto 35px;
-            
+            margin: 15px auto auto 35px;
+
         }
-        .contact-form__mail{
-            &::before{
+
+        .contact-form__mail {
+            &::before {
                 content: url('../images/Phone_Icon.svg');
                 position: absolute;
                 display: block;
                 left: -35px;
             }
         }
-        .contact-form__phone{
-            &::before{
+
+        .contact-form__phone {
+            &::before {
                 content: url('../images/mail_icon.svg');
                 position: absolute;
                 display: block;
@@ -51,20 +54,66 @@
 
     }
 
-    .question-form{
+    .question-form {
         display: flex;
         flex-direction: column;
         width: 320px;
         margin: 0 auto;
-        background-color: red;
 
-        .question-form__label{
+        .question-form__label {
             display: block;
-            
+            font-family: $openSans;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 15px;
+            color: rgba(8, 166, 228, 1);
+            letter-spacing: 3px;
+            margin: 2px auto;
+
         }
 
-        .question-form_name{
-            
+        .question-form_name,
+        .question-form_mail {
+            width: 100%;
+            height: 30px;
+            font-size: 14px;
+            font-family: $openSans;
+            font-weight: 300;
+            color: rgba(120, 152, 154, 1);
+            letter-spacing: 2px;
+            background-color: rgba(255, 255, 255, 1);
+            border: 0px solid transparent;
+            border-bottom: 1px solid rgba(149, 152, 154, 1);
+            margin-bottom: 40px;
+            padding: 5px 10px;
+
+
+            &:focus {
+                outline: 1px solid rgba(8, 166, 228, 1);
+            }
+        }
+
+        .question-form_agreement {
+            font-family: $openSans;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(112, 112, 112, 1);
+        }
+
+        .question-form_submit {
+            width: 226px;
+            padding: 20px 0;
+            font-family: $openSans;
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            border-radius: 35px;
+            background-color: rgba(8, 166, 228, 1);
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+            align-self: flex-end;
+            border: 0px;
+            margin: 60px 0 77px auto;
         }
     }
 
