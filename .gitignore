@@ -23,4 +23,6 @@ node_modules/
 ### Webstorm ##
 .idea/
 
+###Output###
+dist/
 
