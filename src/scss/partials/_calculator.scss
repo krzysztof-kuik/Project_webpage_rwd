@@ -1,230 +1,265 @@
-
-
 .calculator {
     background-color: #F7F7F7;
     padding-top: 87px;
     display: flex;
     flex-direction: column;
     min-height: 638px;
-}
 
-.calculator h2 {
-    font-family: $raleway;
-    font-size: 36px;
-    line-height: 42px;
-}
+    h2 {
 
-.calculator>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 52px auto 109px auto;
-}
+        font-family: $raleway;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+    }
 
-.calculator form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 400px;
-    padding: 0 23px;
-}
+    &>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 52px auto 109px auto;
+    }
 
-.calculator form label,
-.dropDownLabel {
-    width: 100%;
-}
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 400px;
+        padding: 0 23px;
+    }
 
-.calculator form label:nth-last-of-type(1) {
-    margin-bottom: auto;
-}
+    label,
+    .dropDownLabel {
+        width: 100%;
+    }
 
-.dropDownContainer {
-    width: 100%;
-    position: relative;
-    margin: 10px 0;
-}
+    & form label:nth-last-of-type(1) {
+        margin-bottom: auto;
+    }
 
-#numberOfOrders,
-#numberOfProducts,
-.dropDownLabel {
-    width: 100%;
-    height: 40px;
-    font-family: $openSans;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 10px 0;
-    border: 1px solid #08A6E4;
-    box-shadow: 0 3px 6px rgba(8, 166, 228, 0.16);
-    border-radius: 6px;
-    background-color: white;
-    color: rgba(165, 165, 165, 1);
-    padding: 0 20px;
-}
+    .dropDownContainer {
+        width: 100%;
+        position: relative;
+        margin: 10px 0;
+        z-index: 2;
 
+        .dropped {
+            transform: rotate(0);
+        }
+    }
 
-.dropDownLabel {
-    display: block;
-    padding: 11px 20px;
-    margin: 0;
-}
+    img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        transform-origin: center center;
+        transform: rotate(-180deg);
+        transition: transform 500ms ease-out;
+    }
 
-.dropDownLabel:focus {
-    border: 1px solid #0785bd;
-}
-
-.dropdownList li:focus {
-    border: 1px solid #EB476E;
-    outline: none;
-}
-
-
-.calculator .calculator_summary {
-    display: flex;
-    flex-direction: column;
-    width: 385px;
-    padding: 0 23px;
-}
-
-.dropDownContainer img {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    transform-origin: center center;
-    transform: rotate(-180deg);
-    transition: transform 500ms ease-out;
-}
-
-.dropdownList {
-    display: flex;
-    opacity: 0;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    align-items: flex-start;
-    /*padding: 11px 20px;*/
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid #EB476E;
-    box-shadow: 0 3px 6px rgba(235, 71, 110, 0.16);
-    font-family: $openSans;
-    font-size: 13px;
-    line-height: 18px;
-    position: absolute;
-    transform: translateY(10px);
-    transition: opacity 700ms ease-out;
-    z-index: -1;
-    /*transition: opacity 500ms;*/
-}
-
-.dropdownList li {
-    width: 100%;
-    padding: 11px 20px;
-    text-align: left;
-    list-style-type: none;
-}
-
-.dropdownList li:hover {
-    cursor: default;
-    background-color: rgba(210, 210, 210, 0.11);
-}
-
-.calculator .calculator_summary li {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(85, 223, 180, 1);
-    border-radius: 6px;
-    color: white;
-    font-family: $openSans;
-    font-size: 14px;
-    line-height: 19px;
-    padding: 4px 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    margin: 8px auto;
-}
-
-.calculator_summary__price {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-}
+    #numberOfOrders,
+    #numberOfProducts,
+    .dropDownLabel {
+        width: 100%;
+        height: 40px;
+        font-family: $openSans;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 10px 0;
+        border: 1px solid #08A6E4;
+        box-shadow: 0 3px 6px rgba(8, 166, 228, 0.16);
+        border-radius: 6px;
+        background-color: white;
+        color: rgba(165, 165, 165, 1);
+        padding: 0 20px;
+    }
 
 
-.calculator li.invisible {
-    display: none;
-}
+    .dropDownLabel {
+        display: block;
+        padding: 11px 20px;
+        margin: 0;
+    }
 
-#total {
-    width: 179px;
-    background-color: rgba(8, 166, 228, 1);
-    margin: 0 0 auto auto;
-}
+    .dropDownLabel:focus {
+        border: 1px solid #0785bd;
+    }
 
-.checkbox_container {
-    font-family: $openSans;
-    text-align: left;
-    line-height: 17px;
-    font-size: 12px;
-    color: #707070;
-    margin: 23px auto 27px 0px;
-    padding-left: 34px;
-    position: relative;
+    .dropdownList li:focus {
+        border: 1px solid #EB476E;
+        outline: none;
+    }
 
-}
 
-#firstCheckbox,
-#secondCheckbox {
-    padding-left: 10px;
-    width: 24px;
-    height: 24px;
-    border: 1px solid #95989A;
-    border-radius: 4px;
-    position: absolute;
-    left: 0;
-    top: -4px;
-}
+    .calculator_summary {
+        display: flex;
+        flex-direction: column;
+        width: 385px;
+        padding: 0 23px;
+    }
 
-#firstCheckbox:after,
-#secondCheckbox:after {
-    content: '';
-    display: block;
-    background-image: url(../images/checkmark.svg);
-    background-size: cover;
-    width: 16px;
-    height: 18px;
-    opacity: 0;
-    position: absolute;
-    left: 2px;
-    top: 0;
-}
+    .optionsContainer {
 
-#accountancyCheckboc:hover+#firstCheckbox,
-#terminalCheckbox:hover+#secondCheckbox {
-    background-color: rgba(0, 0, 0, 0.1);
-}
+        position: absolute;
+        height: 140px;
+        // background-color: blue;
+        width: 100%;
+        overflow-y: hidden;
+        z-index: -1;
+        max-height: 0;
+        transition: max-height 700ms ease-out;
 
-#accountancyCheckboc:checked+#firstCheckbox:after,
-#terminalCheckbox:checked+#secondCheckbox:after {
-    opacity: 1;
-}
+        &.droppedContainer {
+            max-height: 150px;
 
-#accountancyCheckboc:focus+#firstCheckbox,
-#terminalCheckbox:focus+#secondCheckbox {
-    border: 2px solid #08A6E4;
-}
+        }
 
-#accountancyCheckboc,
-#terminalCheckbox {
-    position: absolute;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    left: 0;
-    bottom: -3px;
-    opacity: 0;
+        .dropdownList {
+            display: flex;
+            opacity: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-start;
+            /*padding: 11px 20px;*/
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid #EB476E;
+            box-shadow: 0 3px 6px rgba(235, 71, 110, 0.16);
+            font-family: $openSans;
+            font-size: 13px;
+            line-height: 18px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 700ms ease-out;
+            // overflow-y: hidden;
+
+            z-index: -1;
+
+            &.droppedList {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+
+
+            /*transition: opacity 500ms;*/
+
+            li {
+                width: 100%;
+                padding: 11px 20px;
+                text-align: left;
+                list-style-type: none;
+
+                &:hover {
+                    cursor: default;
+                    background-color: rgba(210, 210, 210, 0.11);
+                }
+            }
+
+        }
+    }
+
+    .calculator_summary li {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(85, 223, 180, 1);
+        border-radius: 6px;
+        color: white;
+        font-family: $openSans;
+        font-size: 14px;
+        line-height: 19px;
+        padding: 4px 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        margin: 8px auto;
+    }
+
+
+    li.invisible {
+        display: none;
+    }
+
+    .calculator_summary__price {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+
+    #total {
+        width: 179px;
+        background-color: rgba(8, 166, 228, 1);
+        margin: 0 0 auto auto;
+    }
+
+    .checkbox_container {
+        font-family: $openSans;
+        text-align: left;
+        line-height: 17px;
+        font-size: 12px;
+        color: #707070;
+        margin: 23px auto 27px 0px;
+        padding-left: 34px;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    #firstCheckbox,
+    #secondCheckbox {
+        padding-left: 10px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #95989A;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        top: -4px;
+    }
+
+    #firstCheckbox:after,
+    #secondCheckbox:after {
+        content: '';
+        display: block;
+        background-image: url(../images/checkmark.svg);
+        background-size: cover;
+        width: 16px;
+        height: 18px;
+        opacity: 0;
+        position: absolute;
+        left: 2px;
+        top: 0;
+    }
+
+    #accountancyCheckboc:hover+#firstCheckbox,
+    #terminalCheckbox:hover+#secondCheckbox {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    #accountancyCheckboc:checked+#firstCheckbox:after,
+    #terminalCheckbox:checked+#secondCheckbox:after {
+        opacity: 1;
+    }
+
+    #accountancyCheckboc:focus+#firstCheckbox,
+    #terminalCheckbox:focus+#secondCheckbox {
+        border: 2px solid #08A6E4;
+    }
+
+    #accountancyCheckboc,
+    #terminalCheckbox {
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        bottom: -3px;
+        opacity: 0;
+    }
 }

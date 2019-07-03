@@ -1,3 +1,4 @@
+import { log } from "util";
 
 export default calc;
 
@@ -6,6 +7,7 @@ let terminalCheckbox = document.getElementById('terminalCheckbox');
 let numberOfProducts = document.getElementById('numberOfProducts');
 let numberOfOrders = document.getElementById('numberOfOrders');
 let packageChoose = document.querySelector('.dropDownContainer');
+let dropDownListContainer = document.querySelector('.optionsContainer');
 let options = [...packageChoose.children];
 
 let dropDownList = document.querySelector('.dropdownList');
@@ -82,18 +84,28 @@ numberOfOrders.addEventListener('input', function () {
 dropDownListInitiators.forEach(function (element) {
     element.addEventListener('click', function () {
 
-        if (!arrow.classList.contains('dropped')) {
-            arrow.style.transform = 'rotate(0)';
-            arrow.classList.toggle('dropped');
-            dropDownList.style.opacity = '1';
-            dropDownList.style.zIndex = '1';
+        arrow.classList.toggle('dropped');
+        dropDownList.classList.toggle('droppedList');
+        dropDownListContainer.classList.toggle('droppedContainer');
 
-        } else {
-            arrow.style.transform = 'rotate(-180deg)';
-            arrow.classList.toggle('dropped');
-            dropDownList.style.opacity = '0';
-            dropDownList.style.zIndex = '-1';
-        }
+
+
+        // if (!arrow.classList.contains('dropped')) {
+        //     arrow.style.transform = 'rotate(0)';
+        //     arrow.classList.toggle('dropped');
+        //     // dropDownList.style.opacity = '1';
+        //     // dropDownList.style.zIndex = '1';
+        //     console.log(dropDownList);
+
+        //     dropDownList.classList.toggle('droppedList');
+
+        // } else {
+        //     arrow.style.transform = 'rotate(-180deg)';
+        //     arrow.classList.toggle('dropped');
+        //     // dropDownList.style.opacity = '0';
+        //     // dropDownList.style.zIndex = '-1';
+
+        // }
     })
 });
 
@@ -111,10 +123,10 @@ packages.forEach(function (element) {
         packageOption.querySelector('.calc_description').innerText = element.innerText;
         packageOption.querySelector('.price').innerText = `$${packageCharge}`;
         totalChargeUpdate();
-        arrow.style.transform = 'rotate(-180deg)';
+        // arrow.style.transform = 'rotate(-180deg)';
         arrow.classList.toggle('dropped');
-        dropDownList.style.opacity = '0';
-        dropDownList.style.zIndex = '-1';
+        // dropDownList.style.opacity = '0';
+        // dropDownList.style.zIndex = '-1';
         dropDownLabel.innerText = `Wybrany pakiet: ${chosenPackage}`;
     })
 });
