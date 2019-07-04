@@ -15,9 +15,13 @@
 
     &>div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         margin: 52px auto 109px auto;
+
+        @media screen and (min-width : $breakPoint) {
+            flex-direction: row;
+        }
     }
 
     form {
@@ -34,9 +38,9 @@
         width: 100%;
     }
 
-    & form label:nth-last-of-type(1) {
-        margin-bottom: auto;
-    }
+    // & form label:nth-last-of-type(1) {
+    //     margin-bottom: auto;
+    // }
 
     .dropDownContainer {
         width: 100%;
@@ -227,7 +231,8 @@
     #secondCheckbox:after {
         content: '';
         display: block;
-        background-image: url(../images/checkmark.svg);
+        background-image: url(../images/checkmark_2.svg);
+        color: $greenButtonColor;
         background-size: cover;
         width: 16px;
         height: 18px;
@@ -249,7 +254,7 @@
 
     #accountancyCheckboc:focus+#firstCheckbox,
     #terminalCheckbox:focus+#secondCheckbox {
-        border: 2px solid #08A6E4;
+        outline: 2px solid $greenButtonColor;
     }
 
     #accountancyCheckboc,

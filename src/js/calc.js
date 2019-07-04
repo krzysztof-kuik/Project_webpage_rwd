@@ -123,10 +123,9 @@ packages.forEach(function (element) {
         packageOption.querySelector('.calc_description').innerText = element.innerText;
         packageOption.querySelector('.price').innerText = `$${packageCharge}`;
         totalChargeUpdate();
-        // arrow.style.transform = 'rotate(-180deg)';
         arrow.classList.toggle('dropped');
-        // dropDownList.style.opacity = '0';
-        // dropDownList.style.zIndex = '-1';
+        dropDownList.classList.toggle('droppedList');
+        dropDownListContainer.classList.toggle('droppedContainer');
         dropDownLabel.innerText = `Wybrany pakiet: ${chosenPackage}`;
     })
 });
