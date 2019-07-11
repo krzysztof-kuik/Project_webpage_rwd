@@ -1,6 +1,7 @@
 .main-width {
     max-width: 1352px;
     margin: 0 auto;
+    // overflow-x: hidden;
 }
 
 .header {
@@ -140,6 +141,7 @@
                     bottom: 0;
                     left: 0;
                 }
+
                 @media screen and (min-width: $breakPoint) {
                     &:hover::after {
                         width: 100%;
@@ -147,7 +149,7 @@
 
                     }
                 }
-                
+
             }
         }
     }

@@ -1,0 +1,33 @@
+.footer-section {
+    background-color: rgba(247, 247, 247, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.16);
+
+    .footer-logo {
+        margin: 22px auto 22px 17px;
+
+        .footer-logo__logo {
+            color: rgba(8, 166, 228, 1);
+            font-size: 26px;
+            font-family: $raleway;
+            font-weight: 300;
+        }
+
+        .footer-logo__rights-info {
+            color: rgba(165, 165, 165, 1);
+            font-family: $openSans;
+            font-weight: 400;
+            font-size: 11px;
+        }
+    }
+
+    .footer-socials {
+        margin: 0 20px;
+
+        a {
+            margin: 0 10px;
+        }
+    }
+}
